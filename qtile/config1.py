@@ -39,8 +39,8 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+"), desc="Volume up"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-"), desc="Volume down"),
     Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute toggle"),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 10%"), desc='Brightness up'),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 10%"), desc='Brightness down'),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s 10%+"), desc='Brightness up'),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnesstcl s 10%-"), desc='Brightness down'),
 ]
 
 groups = [Group(i) for i in "123456789"]
